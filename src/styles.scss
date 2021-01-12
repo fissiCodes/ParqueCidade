@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: 'titilum';
+    src: url('../src/assets/fonts/titilum/TitilliumWeb-Light.ttf');
+}
+
+@font-face{
+    font-family: 'valera';
+    src: url('../src/assets/fonts/titilum/TitilliumWeb-Black.ttf')
+}
+
+@font-face{
+    font-family: 'cinzel';
+    src: url('../src/assets/fonts/cinzel/Cinzel-Black.ttf')
+}
+
+html, body
+{
+    margin: 0;
+}
