@@ -16,7 +16,8 @@ import {TableModule} from 'primeng/table';
 import {ToolbarModule} from 'primeng/toolbar';
 import {ButtonModule} from 'primeng/button';
 import {DialogModule} from 'primeng/dialog';
-
+import {PanelMenuModule} from 'primeng/panelmenu';
+import {MenuItem} from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {DialogModule} from 'primeng/dialog';
     ToolbarModule,
     DialogModule,
     ButtonModule,
+    PanelMenuModule,
     TableModule
   ],
   providers: [],

@@ -12,4 +12,9 @@
             <a><i class="logoutButton pi pi-sign-out" routerLink='/Login'></i></a>
         </div>
     </div>
+    <p-sidebar [(visible)]="visible">
+        <h1>Menu</h1>
+        <p-panelMenu [model]="items" [style]="{'width':'300px'}">
+        </p-panelMenu>
+    </p-sidebar>
 </html>
