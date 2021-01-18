@@ -7,17 +7,20 @@
 }
 
 .tittle{    
-    margin-left: 27%;
+    // margin-left: 27%;
     font-size: 300%;
+    width: 100%;
     text-align: center;
     font-family: 'titilum';
+    position: absolute;
 }
 
 .logout{
     display: inline-flex;
     cursor: pointer;
     margin-top: 2%;
-    margin-left: 30%;
+    float: right;
+    margin-left: 80%;
 }
 
 .logoutButton{

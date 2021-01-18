@@ -11,6 +11,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { ForgotComponent } from './components/forgot/forgot.component';
+import { AccessListComponent } from './components/access-list/access-list.component';
+import {TableModule} from 'primeng/table';
+import {ToolbarModule} from 'primeng/toolbar';
+import {ButtonModule} from 'primeng/button';
+import {DialogModule} from 'primeng/dialog';
 
 
 @NgModule({
@@ -20,14 +25,19 @@ import { ForgotComponent } from './components/forgot/forgot.component';
     HomeComponent,
     HeaderComponent,
     MainPageComponent,
-    ForgotComponent
+    ForgotComponent,
+    AccessListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     BrowserAnimationsModule,
-    SidebarModule
+    SidebarModule,
+    ToolbarModule,
+    DialogModule,
+    ButtonModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+import { TitleCasePipe } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -8,23 +9,40 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class ForgotComponent implements OnInit {
 
   user: string;
+  email: string;
   msgVisible: boolean = false;
   fase1: boolean = true;
-  @ViewChild("username") username: ElementRef;
+  visible: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
     this.user = "";
+    this.email = "";
   }
 
-  ngAfterViewInit(): void{
-    console.log(this.username.nativeElement.value);
+  getUserInput(value){
+    this.user = value as string;
+    if(this.user == "" || this.user == undefined){
+      this.msgVisible = true;
+    } else {
+      this.msgVisible = false;
+      this.visible = !this.visible;
+    }
   }
 
+  getEmailInput(value){
+    this.email = value as string;
+    if(this.email == "" || this.email == undefined){
+      this.msgVisible = true;
+    } else {
+      this.msgVisible = false;
+      this.visible = !this.visible;
+    }
+  }
+  
   next(){
     console.log(this.user);
-    console.log(this.username.nativeElement.value);
     // if(){
     //   .style.backgroundColor = "red";
     //   this.msgVisible = true;

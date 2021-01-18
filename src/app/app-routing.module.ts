@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AccessListComponent } from './components/access-list/access-list.component';
 import { ForgotComponent } from './components/forgot/forgot.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   { 
     path: 'Home', component: HomeComponent
+  },
+  {
+    path: 'ListaDeAcesso', component: AccessListComponent
   }
 ];
 

@@ -1,23 +1,23 @@
-<form class="panel" id="panel" (submit)="next()">
+<div class="panel" id="panel" *ngIf="visible">
     <img src="../../../assets/images/jll-logo-positive.png" style="width: 50%;cursor: pointer;" routerLink=''>
     <h1 style="font-family: 'titilum';">RESET PASSWORD</h1>
-        DIGITE O SEU NOME DE USUARIO<br>
+        DIGITE O SEU USUARIO<br>
     <div class="loginComponent">
         <label for="userName" >Username:</label>
-        <input id="username" class="RPInput" type="text" placeholder="UserName" [(value)]="user"><br>
+        <input id="username" class="RPInput" type="text" placeholder="UserName" #userInput><br>
         <label id="msg" style="color: brown;" *ngIf="msgVisible">Favor verificar se o username está correto</label>
     </div>
-    <button class="login" (click)="next()">Seguinte</button>
-</form>
+    <button class="login" (click)="getUserInput(userInput.value)">Seguinte</button>
+</div>
 
-<form class="panel" id="panel2">
+<div class="panel" id="panel2" *ngIf="!visible">
     <img src="../../../assets/images/jll-logo-positive.png" style="width: 50%;cursor: pointer;" routerLink=''>
     <h1 style="font-family: 'titilum';">RESET PASSWORD</h1>
-        DIGITE O SEU NOME DE USUARIO<br>
+        DIGITE O SEU E-MAIL<br>
     <div class="loginComponent">
-        <label for="userName" >Username:</label>
-        <input id="username" class="RPInput" type="text" placeholder="UserName" [(value)]="user"><br>
-        <label id="msg" style="color: brown;" *ngIf="msgVisible">Favor verificar se o username está correto</label>
+        <label for="userName" >E-Mail:</label>
+        <input id="username" class="RPInput" type="text" placeholder="e-mail" #email><br>
+        <label id="msg" style="color: brown;" *ngIf="msgVisible">Favor verificar se o e-mail está correto</label>
     </div>
-    <button class="login" (click)="next()">Seguinte</button>    
-</form>
+    <button class="login" (click)="getEmailInput(email)">Seguinte</button>    
+</div>
